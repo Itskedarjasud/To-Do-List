@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --light-color: #ffffff;
+    --dark-color: #000000;
+}
+
+.dark-theme{
+    --light-color: #000000;
+    --dark-color: #ffffff;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--dark-color);
+    padding: 10px;
+}
+.to_do{
+    width: 100%;
+    max-width: 540px;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.to_do h1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.to_do h1 #bord{
+    width: 45px;
+    margin-left: 10px;
+}
+.to_do h1 #icon{
+    width: 30px;
+    margin-left: 10px;
+    margin-left: 200px;
+    cursor: pointer;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-color);
+    margin-bottom: 25px;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+input{
+    flex: 1;
+    border: 1px solid var(--light-color);
+    outline: none;
+    background: transparent;
+    padding: 15px;
+    font-size: 20px;
+    color: var(--dark-color);
+}
+.row button{
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 16px 50px;
+    background: #DC4F28;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+}
+ul li{
+    list-style: none;
+    font-size: 21px;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    color: var(--dark-color);
+
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 3px;
+}
+ul li.checked{
+    color: var(--dark-color);
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked85.png);
+   
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    color :#B989F4;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+
+}
+ul li span:hover{
+    background-color: #CEE1E1;
+}
+
