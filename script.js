@@ -50,3 +50,7 @@ function showTask(){
 showTask();
 
 
+window.addEventListener('resize', function() {
+    // Adapt layout if needed
+  });
+  
